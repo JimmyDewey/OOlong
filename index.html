@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="zn-CH">
+	<link rel="stylesheet" href="css/OOlong.css" />
+<!--  	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> -->
+	<script src="js/jquery-1.6.4.js"></script>
+	<script type="text/javascript" src="js/OOlong.js"></script>
+	<head>
+		<meta charset="UTF-8">
+		<title>应用花境</title>
+	</head>
+	<script>
+		function testFuckingIE() {
+			var ua = navigator.userAgent;
+			if(/MSIE([^;]+)/.test(ua)) {
+				return parseInt(RegExp["$1"]);
+			} else
+				return 2012;
+		}
+		if(testFuckingIE() < 9 && window.location.hash != "#anyway") {
+			location.replace("sorry.html");
+		}
+	</script>
+	<body>
+		<div id="loading"></div>
+		<script>
+			$(document).ready(function() {
+				OOlong.init();
+				OOlong.alert("<strong>纪念乔布斯，感谢因你而不同的这个世界。</strong><br/><br/><small>本窗口10.05秒后自动消失</small>", {
+					"position" : [20, 20],
+					"last" : 10050,
+					"button" : false,
+					"height" : 100
+				});
+			});
+
+		</script>
+		<div id="hold"></div>
+		<img id="background" src="" />
+		<div id="motto">
+			Because the people who are crazy enough to think they can change the world,are the ones who do.
+		</div>
+		<!-- 	 <div class="win_current" id="0">
+		<div class="win_title" >
+		窗口标题
+		<div class="win_handle">
+		<a class="min"></a>
+		<a class="max"></a>
+		<a class="revert"></a>
+		<a class="close"></a>
+		</div>
+		</div>
+		<div class="spin"></div>
+		<iframe class="win_content" src="about.html"></iframe>
+		</div> -->
+		<div class="icon_container">
+			<!-- 	<div class="icon" id="14i">
+			<div class="shadow"></div>
+			<div class="icon_pic">
+			<img src="icons/bird.png" />
+			</div>
+			<div class="icon_title">
+			0
+			</div>
+			</div>
+			-->
+		</div>
+		<!--右上的快捷方式 -->
+		<ul id="navigation">
+			<li class="desktop">
+				<a title="显示桌面">桌面</a>
+			</li>
+			<li class="comment">
+				<a title="Comments">聊天</a>
+			</li>
+			<!-- 	<li class="picture">
+			<a title="Pictures">图片</a>
+			</li>
+			<li class="audio">
+			<a title="Audio">音乐</a>
+			</li>
+			<li class="video">
+			<a title="video">视频</a>
+			</li> -->
+			<li class="about" >
+				<a title="About">关于</a>
+			</li>
+			<li class="shutdown">
+				<a title="Shut Down">离开</a>
+			</li>
+		</ul>
+		<!--底部的dock -->
+		<div class="dock" id="dock2">
+			<div class="dock-container2">
+				<!-- <a class="dock-item2" id="0d" href="#"><span>Home</span><img src="icons/bird.png" alt="home" /></a> -->
+			</div>
+		</div>
+		<script type="text/javascript" src="js/interface.js"></script>
+		<script type="text/javascript" src="js/spin.min.js"></script>
+	</body>
+</html>

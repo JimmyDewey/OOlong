@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0045)http://fmarcia.info/jquery/tetris/tetris.html -->
+<HTML>
+	<HEAD>
+		<TITLE>俄罗斯方块</TITLE>
+		<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+		<script src="./jquery.js"></script>
+		<LINK href="./tetris.css" type=text/css rel=stylesheet>
+	</HEAD>
+	<BODY>
+		<DIV id=tetris>
+			<DIV id=grid>
+				<TABLE summary="">
+					<TBODY>
+						<TR>
+							<TD id=a1></TD>
+							<TD id=a2></TD>
+							<TD id=a3></TD>
+							<TD id=a4></TD>
+							<TD id=a5></TD>
+							<TD id=a6></TD>
+							<TD id=a7></TD>
+							<TD id=a8></TD>
+							<TD id=a9></TD>
+							<TD id=a10></TD>
+						</TR>
+						<TR>
+							<TD id=b1></TD>
+							<TD id=b2></TD>
+							<TD id=b3></TD>
+							<TD id=b4></TD>
+							<TD id=b5></TD>
+							<TD id=b6></TD>
+							<TD id=b7></TD>
+							<TD id=b8></TD>
+							<TD id=b9></TD>
+							<TD id=b10></TD>
+						</TR>
+						<TR>
+							<TD id=c1></TD>
+							<TD id=c2></TD>
+							<TD id=c3></TD>
+							<TD id=c4></TD>
+							<TD id=c5></TD>
+							<TD id=c6></TD>
+							<TD id=c7></TD>
+							<TD id=c8></TD>
+							<TD id=c9></TD>
+							<TD id=c10></TD>
+						</TR>
+						<TR>
+							<TD id=d1></TD>
+							<TD id=d2></TD>
+							<TD id=d3></TD>
+							<TD id=d4></TD>
+							<TD id=d5></TD>
+							<TD id=d6></TD>
+							<TD id=d7></TD>
+							<TD id=d8></TD>
+							<TD id=d9></TD>
+							<TD id=d10></TD>
+						</TR>
+						<TR>
+							<TD id=e1></TD>
+							<TD id=e2></TD>
+							<TD id=e3></TD>
+							<TD id=e4></TD>
+							<TD id=e5></TD>
+							<TD id=e6></TD>
+							<TD id=e7></TD>
+							<TD id=e8></TD>
+							<TD id=e9></TD>
+							<TD id=e10></TD>
+						</TR>
+						<TR>
+							<TD id=f1></TD>
+							<TD id=f2></TD>
+							<TD id=f3></TD>
+							<TD id=f4></TD>
+							<TD id=f5></TD>
+							<TD id=f6></TD>
+							<TD id=f7></TD>
+							<TD id=f8></TD>
+							<TD id=f9></TD>
+							<TD id=f10></TD>
+						</TR>
+						<TR>
+							<TD id=g1></TD>
+							<TD id=g2></TD>
+							<TD id=g3></TD>
+							<TD id=g4></TD>
+							<TD id=g5></TD>
+							<TD id=g6></TD>
+							<TD id=g7></TD>
+							<TD id=g8></TD>
+							<TD id=g9></TD>
+							<TD id=g10></TD>
+						</TR>
+						<TR>
+							<TD id=h1></TD>
+							<TD id=h2></TD>
+							<TD id=h3></TD>
+							<TD id=h4></TD>
+							<TD id=h5></TD>
+							<TD id=h6></TD>
+							<TD id=h7></TD>
+							<TD id=h8></TD>
+							<TD id=h9></TD>
+							<TD id=h10></TD>
+						</TR>
+						<TR>
+							<TD id=i1></TD>
+							<TD id=i2></TD>
+							<TD id=i3></TD>
+							<TD id=i4></TD>
+							<TD id=i5></TD>
+							<TD id=i6></TD>
+							<TD id=i7></TD>
+							<TD id=i8></TD>
+							<TD id=i9></TD>
+							<TD id=i10></TD>
+						</TR>
+						<TR>
+							<TD id=j1></TD>
+							<TD id=j2></TD>
+							<TD id=j3></TD>
+							<TD id=j4></TD>
+							<TD id=j5></TD>
+							<TD id=j6></TD>
+							<TD id=j7></TD>
+							<TD id=j8></TD>
+							<TD id=j9></TD>
+							<TD id=j10></TD>
+						</TR>
+						<TR>
+							<TD id=k1></TD>
+							<TD id=k2></TD>
+							<TD id=k3></TD>
+							<TD id=k4></TD>
+							<TD id=k5></TD>
+							<TD id=k6></TD>
+							<TD id=k7></TD>
+							<TD id=k8></TD>
+							<TD id=k9></TD>
+							<TD id=k10></TD>
+						</TR>
+						<TR>
+							<TD id=l1></TD>
+							<TD id=l2></TD>
+							<TD id=l3></TD>
+							<TD id=l4></TD>
+							<TD id=l5></TD>
+							<TD id=l6></TD>
+							<TD id=l7></TD>
+							<TD id=l8></TD>
+							<TD id=l9></TD>
+							<TD id=l10></TD>
+						</TR>
+						<TR>
+							<TD id=m1></TD>
+							<TD id=m2></TD>
+							<TD id=m3></TD>
+							<TD id=m4></TD>
+							<TD id=m5></TD>
+							<TD id=m6></TD>
+							<TD id=m7></TD>
+							<TD id=m8></TD>
+							<TD id=m9></TD>
+							<TD id=m10></TD>
+						</TR>
+						<TR>
+							<TD id=n1></TD>
+							<TD id=n2></TD>
+							<TD id=n3></TD>
+							<TD id=n4></TD>
+							<TD id=n5></TD>
+							<TD id=n6></TD>
+							<TD id=n7></TD>
+							<TD id=n8></TD>
+							<TD id=n9></TD>
+							<TD id=n10></TD>
+						</TR>
+						<TR>
+							<TD id=o1></TD>
+							<TD id=o2></TD>
+							<TD id=o3></TD>
+							<TD id=o4></TD>
+							<TD id=o5></TD>
+							<TD id=o6></TD>
+							<TD id=o7></TD>
+							<TD id=o8></TD>
+							<TD id=o9></TD>
+							<TD id=o10></TD>
+						</TR>
+						<TR>
+							<TD id=p1></TD>
+							<TD id=p2></TD>
+							<TD id=p3></TD>
+							<TD id=p4></TD>
+							<TD id=p5></TD>
+							<TD id=p6></TD>
+							<TD id=p7></TD>
+							<TD id=p8></TD>
+							<TD id=p9></TD>
+							<TD id=p10></TD>
+						</TR>
+						<TR>
+							<TD id=q1></TD>
+							<TD id=q2></TD>
+							<TD id=q3></TD>
+							<TD id=q4></TD>
+							<TD id=q5></TD>
+							<TD id=q6></TD>
+							<TD id=q7></TD>
+							<TD id=q8></TD>
+							<TD id=q9></TD>
+							<TD id=q10></TD>
+						</TR>
+						<TR>
+							<TD id=r1></TD>
+							<TD id=r2></TD>
+							<TD id=r3></TD>
+							<TD id=r4></TD>
+							<TD id=r5></TD>
+							<TD id=r6></TD>
+							<TD id=r7></TD>
+							<TD id=r8></TD>
+							<TD id=r9></TD>
+							<TD id=r10></TD>
+						</TR>
+					</TBODY>
+				</TABLE>
+			</DIV>
+			<DIV id=next>
+				<TABLE summary="">
+					<TBODY>
+						<TR>
+							<TD id=x00></TD>
+							<TD id=x10></TD>
+							<TD id=x20></TD>
+							<TD id=x30></TD>
+						</TR>
+						<TR>
+							<TD id=x01></TD>
+							<TD id=x11></TD>
+							<TD id=x21></TD>
+							<TD id=x31></TD>
+						</TR>
+						<TR>
+							<TD id=x02></TD>
+							<TD id=x12></TD>
+							<TD id=x22></TD>
+							<TD id=x32></TD>
+						</TR>
+						<TR>
+							<TD id=x03></TD>
+							<TD id=x13></TD>
+							<TD id=x23></TD>
+							<TD id=x33></TD>
+						</TR>
+					</TBODY>
+				</TABLE>
+			</DIV>
+			<DIV id=stats>
+				<DIV>
+					难度: <SPAN id=level>1</SPAN>
+				</DIV>
+				<DIV>
+					行数: <SPAN id=lines>0</SPAN>
+				</DIV>
+				<DIV>
+					得分: <SPAN id=score>0</SPAN>
+				</DIV>
+			</DIV>
+			<DIV id=cmd>
+				<INPUT id=start type=button value='开始'>
+				<BR>
+				<INPUT id=stop disabled type=button value='停止'>
+			</DIV>
+			<DIV id=info>
+				<DIV>
+					左: J
+				</DIV>
+				<DIV>
+					右: L
+				</DIV>
+				<DIV>
+					旋转: I
+				</DIV>
+				<DIV>
+					下落: K
+				</DIV>
+			</DIV>
+		</DIV>
+		<SCRIPT src="./tetris.js" type=text/javascript></SCRIPT>
+	</BODY>
+</HTML>

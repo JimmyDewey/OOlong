@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>index</title>
+		<meta name="author" content="Dewey" />
+		<!-- Date: 2011-11-04 -->
+		<script type="text/javascript" src="../../js/jquery-1.6.4.js"></script>
+		<script type="text/javascript" src="../../js/OOlong.js"></script>
+	</head>
+	<style type="text/css">
+		.html, body{
+			margin: 0;
+			padding: 0;
+		}
+		.main_container{
+			margin: 0 auto;
+			padding: 0;
+			width: 500px;
+			height: auto;
+			background-color: #4BFE86;
+		}
+		.container {
+			width: 100%;
+			height: auto;
+			float: left;
+			background-color: #fff6a5;
+			margin-bottom: 5px;
+		}		
+	</style>
+	<script type="text/javascript">
+		function setBG () {
+			var src;
+			if (src = document.getElementById("bg_src").value) {
+				OOlong.iSetBackGround(src);
+			} else {
+				OOlong.iAlert("好歹写点啥啊……");
+			}
+		}
+		function testAlert () {
+			var title = document.getElementById('title').value;
+			var shadow = document.getElementById('shadow').checked;
+			var height = document.getElementById('height').value;
+			var last = document.getElementById('last').value;
+			var top = document.getElementById('top').value;
+			var left = document.getElementById('left').value;
+			var message = document.getElementById('message').value;
+			OOlong.iAlert(message,{
+				"title": title,
+				"shadow": shadow,
+				"height": height,
+				"last": last,
+				"position": [top,left]
+			});
+		}
+	</script>
+	<body>
+		<div class="main_container">
+			<div class="container">
+				<h2>1.设置背景</h2>
+				<h4>调用方法{OOlong.iSetBackGround(src);}</h4>
+				请将图片地址输入以下文本框：<br />
+				<input type="text" id="bg_src"/>
+				<button onclick="setBG();">设置背景</button>
+			</div>
+			<div class="container">
+				<h2>2.调用OOlong对话框</h2>
+				<h4>I.基本调用{OOlong.iAlert(message);}</h4>
+				输入要显示的信息:<input type="text" id="message"/>
+				<button onclick="OOlong.iAlert(document.getElementById('message').value);">弹出对话框</button>	
+				======================================================<br />
+				<h4>II.带参调用{OOlong.iAlert(message,{"arg1":arg1,..});}</h4>
+				这个要解释下了，目前开放的可定制参数有:<br />
+				----"title": "标题头",<br />
+				----"shadow": true,&nbsp;&nbsp;&nbsp;<br />
+				----"position": [400,80], //分别为top，left值，设定窗口出现位置<br />
+				----"last" : 2000,&nbsp;&nbsp;&nbsp;//窗口出现多长时间<br />
+				----"height": 800 &nbsp;&nbsp;&nbsp;//窗体高度，因为某些时候对高度控制的算法不乐观<br />	
+				----------------------------------------------------------------------------------------------<br />
+				要显示的信息请在上面的文本框输入输入:<br />
+				请输入标题名：<input type="text" id="title"/><br />
+				是否要显示背景层：<input type="checkbox" id="shadow"/><br />
+				请输入对话框高度(px)：<input type="text" id="height"/><br />
+				对话框距上边缘（px）:<input type="text" id="top"/><br />
+				对话框距左边缘（px）:<input type="text" id="left"/><br />
+				对话框持续时间（毫秒）：<input type="text" id="last"/>
+				<button onclick="testAlert();">弹出对话框</button>	
+				======================================================<br />
+			</div>
+		</div>
+	</body>
+</html>
